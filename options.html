@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Group Manager - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tab Group Manager Settings</h1>
+      <p class="subtitle">Configure rules to automatically organize tabs into groups</p>
+    </header>
+
+    <div class="rules-section">
+      <div class="section-header">
+        <h2>Tab Group Rules</h2>
+        <button id="addRuleBtn" class="btn btn-primary">+ Add Rule</button>
+      </div>
+
+      <div id="rulesList" class="rules-list">
+        <!-- Rules will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- Add Rule Modal -->
+    <div id="ruleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle">Add New Rule</h3>
+          <button class="close-btn" id="closeModal">&times;</button>
+        </div>
+        <form id="ruleForm">
+          <div class="form-group">
+            <label for="ruleName">Rule Name</label>
+            <input type="text" id="ruleName" placeholder="e.g., GitHub" required>
+          </div>
+          <div class="form-group">
+            <label for="rulePattern">URL Patterns</label>
+            <div class="tags-input-container" id="tagsContainer">
+              <div class="tags-list" id="tagsList"></div>
+              <input type="text" id="rulePattern" placeholder="Type URL pattern and press Enter" autocomplete="off">
+            </div>
+            <small>Type a URL pattern (e.g., github.com) and press Enter to add it as a tag. You can add multiple patterns per rule.</small>
+          </div>
+          <div class="form-group">
+            <label for="groupName">Tab Group Name</label>
+            <input type="text" id="groupName" placeholder="e.g., GitHub" required>
+          </div>
+          <div class="form-group">
+            <label for="groupColor">Tab Group Color</label>
+            <select id="groupColor" required>
+              <option value="grey">Grey</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+              <option value="yellow">Yellow</option>
+              <option value="green">Green</option>
+              <option value="pink">Pink</option>
+              <option value="purple">Purple</option>
+              <option value="cyan">Cyan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="ruleEnabled" checked>
+              Enable this rule
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save Rule</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="rules.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
+
+
