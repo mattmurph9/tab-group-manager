@@ -43,9 +43,10 @@ automatic-tab-group-chrome/
 
 You need to create icon files for the extension. You can:
 
-**Option A: Use the provided script** (requires ImageMagick):
+**Option A: Use the provided Python script** (requires Pillow):
 ```bash
-./create-icons.sh
+pip3 install Pillow
+python3 create-icons.py
 ```
 
 **Option B: Create manually**:
@@ -118,7 +119,8 @@ Any tab opened with `github.com` in the URL will be added to the "GitHub" tab gr
 zip -r automatic-tab-group-chrome.zip . \
   -x "*.git*" \
   -x "*.DS_Store" \
-  -x "create-icons.sh" \
+  -x "create-icons.py" \
+  -x "build.sh" \
   -x "README.md"
 ```
 

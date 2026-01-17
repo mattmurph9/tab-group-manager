@@ -15,7 +15,7 @@ fi
 zip -r "$ZIP_FILE" . \
     -x "*.git*" \
     -x "*.DS_Store" \
-    -x "create-icons.sh" \
+    -x "create-icons.py" \
     -x "build.sh" \
     -x "README.md" \
     -x "*.zip"
