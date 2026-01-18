@@ -194,6 +194,7 @@ header h1 {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .detail-item code {
@@ -202,6 +203,7 @@ header h1 {
   border-radius: 4px;
   font-family: 'Courier New', monospace;
   font-size: 12px;
+  white-space: nowrap;
 }
 
 .color-badge {
