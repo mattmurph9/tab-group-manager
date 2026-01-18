@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tab Group Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        h2 {
+            color: #1a73e8;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+        
+        .highlight {
+            background-color: #e8f0fe;
+            padding: 15px;
+            border-left: 4px solid #1a73e8;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .last-updated {
+            color: #999;
+            font-size: 12px;
+            margin-top: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Tab Group Manager Chrome Extension</p>
+        
+        <div class="highlight">
+            <strong>TL;DR:</strong> Tab Group Manager does not collect, store, or transmit any personal data. All data remains on your device.
+        </div>
+        
+        <h2>Data Collection</h2>
+        <p>
+            <strong>Tab Group Manager does not collect, store, or transmit any personal data or information.</strong>
+        </p>
+        <p>
+            The extension operates entirely locally on your device and does not communicate with any external servers.
+        </p>
+        
+        <h2>Data Storage</h2>
+        <p>
+            Tab Group Manager uses Chrome's built-in storage API (<code>chrome.storage.sync</code>) to save your tab group rules and configuration. This data includes:
+        </p>
+        <ul>
+            <li>Tab group rules (URL patterns, group names, colors)</li>
+            <li>Rule enable/disable status</li>
+            <li>No personal information or browsing history</li>
+        </ul>
+        <p>
+            This data:
+        </p>
+        <ul>
+            <li>Is stored only on your device</li>
+            <li>Is synced across your Chrome browsers (if you have Chrome sync enabled in your browser settings)</li>
+            <li>Is never sent to external servers</li>
+            <li>Is never shared with third parties</li>
+            <li>Is never used for advertising or analytics</li>
+        </ul>
+        
+        <h2>Permissions</h2>
+        <p>
+            Tab Group Manager requires the following permissions:
+        </p>
+        <ul>
+            <li><strong>tabs</strong>: Required to access tab information and organize tabs into groups</li>
+            <li><strong>tabGroups</strong>: Required to create and manage tab groups</li>
+            <li><strong>storage</strong>: Required to save your rules configuration</li>
+            <li><strong>&lt;all_urls&gt;</strong>: Required to check URLs of tabs to match against your rules</li>
+        </ul>
+        <p>
+            The extension only uses these permissions for their stated purpose: automatically organizing your tabs into groups based on your configured rules. No URL data is collected, logged, or transmitted.
+        </p>
+        
+        <h2>Third-Party Services</h2>
+        <p>
+            Tab Group Manager does not use any third-party services, analytics tools, tracking scripts, or external APIs. The extension is completely self-contained and operates entirely within your browser.
+        </p>
+        
+        <h2>Updates to This Policy</h2>
+        <p>
+            If we make any changes to this privacy policy, we will update this page and the "Last Updated" date below. We encourage you to review this policy periodically.
+        </p>
+        
+        <h2>Contact</h2>
+        <div class="contact">
+            <p>
+                If you have any questions about this privacy policy, please open an issue on our GitHub repository:
+            </p>
+            <p>
+                <a href="https://github.com/mattmurph9/tab-group-manager" target="_blank">https://github.com/mattmurph9/tab-group-manager</a>
+            </p>
+        </div>
+        
+        <p class="last-updated">Last Updated: January 2025</p>
+    </div>
+</body>
+</html>
