@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tab Group Manager</title>
+  <link rel="stylesheet" href="shared.css">
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
@@ -12,8 +13,41 @@
       <h2>Tab Group Manager</h2>
     </header>
     <div class="content">
-      <p>Manage your tab group rules from the options page.</p>
-      <button id="openOptions" class="btn btn-primary">Open Settings</button>
+      <div id="quickAddSection">
+        <button id="toggleQuickAdd" class="btn btn-secondary">+ Add Rule</button>
+        <form id="quickAddForm" style="display: none;">
+          <div class="form-group">
+            <label for="quickPattern">URL Patterns</label>
+            <div class="tags-input-container" id="quickTagsContainer">
+              <div class="tags-list" id="quickTagsList"></div>
+              <input type="text" id="quickPattern" placeholder="Type URL pattern and press Enter" autocomplete="off">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="quickGroupName">Group Name</label>
+            <input type="text" id="quickGroupName" placeholder="e.g., GitHub" required>
+          </div>
+          <div class="form-group">
+            <label for="quickColor">Color</label>
+            <select id="quickColor">
+              <option value="grey">Grey</option>
+              <option value="blue" selected>Blue</option>
+              <option value="red">Red</option>
+              <option value="yellow">Yellow</option>
+              <option value="green">Green</option>
+              <option value="pink">Pink</option>
+              <option value="purple">Purple</option>
+              <option value="cyan">Cyan</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancelQuickAdd" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Add Rule</button>
+          </div>
+        </form>
+      </div>
+      <div class="divider"></div>
+      <button id="openOptions" class="btn btn-secondary">Open Settings</button>
     </div>
     <div class="footer">
       <div id="rulesCount" class="rules-count">Loading...</div>

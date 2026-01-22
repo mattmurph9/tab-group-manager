@@ -30,33 +30,76 @@ header h2 {
 
 .content {
   padding: 20px 16px;
-  text-align: center;
 }
 
 .content p {
   color: #5f6368;
   font-size: 14px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
-.btn {
-  padding: 10px 20px;
-  border: none;
+.divider {
+  height: 1px;
+  background-color: #dadce0;
+  margin: 16px 0;
+}
+
+#quickAddForm {
+  margin-top: 12px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+/* Form and tag styles are in shared.css */
+
+/* Code tag styling for popup patterns */
+.tags-input-container code.removable-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--bg-secondary);
+  padding: 2px 6px 2px 8px;
   border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tags-input-container code.removable-tag .tag-remove {
+  background: rgba(95, 99, 104, 0.1);
+  color: var(--text-secondary);
   font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+  border-radius: 3px;
+}
+
+.tags-input-container code.removable-tag .tag-remove:hover {
+  background: rgba(95, 99, 104, 0.2);
+  color: var(--text-primary);
+}
+
+/* Popup-specific form-actions override */
+.form-actions {
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.form-actions .btn {
+  flex: 1;
+}
+
+/* Popup-specific button override */
+.btn {
   width: 100%;
-}
-
-.btn-primary {
-  background-color: #1a73e8;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #1557b0;
 }
 
 .footer {
